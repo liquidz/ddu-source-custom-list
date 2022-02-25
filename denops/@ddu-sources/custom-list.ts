@@ -2,8 +2,8 @@ import {
   BaseSource,
   Context,
   Item,
-} from "https://deno.land/x/ddu_vim@v0.11.0/types.ts";
-import { Denops } from "https://deno.land/x/ddu_vim@v0.11.0/deps.ts";
+} from "https://deno.land/x/ddu_vim@v0.14/types.ts";
+import { Denops } from "https://deno.land/x/ddu_vim@v0.14/deps.ts";
 
 import { ActionData } from "../@ddu-kinds/custom-list.ts";
 
