@@ -1,0 +1,36 @@
+= ddu-source-custom-list
+
+Custom list source for ddu.vim
+
+This souce allows you to specify custom text list as a ddu source programatically.
+
+== Configuration
+
+[source,vim]
+----
+call ddu#custom#patch_global({
+    \   'kindOptions': {
+    \     'custom-list': {
+    \       'defaultAction': 'callback',
+    \     },
+    \   }
+    \ })
+----
+
+== Usage
+
+[source,vim]
+----
+let id = denops#callback#register(
+    \ {s -> execute(printf('echom "%s"', s), '')},
+    \ {'once': v:true})
+call ddu#start({'sources': [
+    \  {'name': 'custom-list',
+    \   'params': {'texts': ['hello', 'world'], 'callbackId': id}}]})
+----
+
+== License
+
+Copyright (c) 2022 http://twitter.com/uochan[Masashi Iizuka]
+
+Distributed under the MIT License.
