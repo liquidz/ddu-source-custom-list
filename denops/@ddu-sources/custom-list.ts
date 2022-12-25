@@ -1,9 +1,5 @@
-import {
-  BaseSource,
-  Context,
-  Item,
-} from "https://deno.land/x/ddu_vim@v1.9.0/types.ts";
-import { Denops } from "https://deno.land/x/ddu_vim@v1.9.0/deps.ts";
+import { BaseSource, Item } from "https://deno.land/x/ddu_vim@v2.0.0/types.ts";
+import { Denops } from "https://deno.land/x/ddu_vim@v2.0.0/deps.ts";
 
 import { ActionData } from "../@ddu-kinds/custom-list.ts";
 
@@ -17,7 +13,6 @@ export class Source extends BaseSource<Params> {
 
   gather(args: {
     denops: Denops;
-    context: Context;
     sourceParams: Params;
   }): ReadableStream<Item<ActionData>[]> {
     return new ReadableStream({
